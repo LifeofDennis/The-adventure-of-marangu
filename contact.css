@@ -1,4 +1,17 @@
 
+:root {
+    --white: #FFFFFF;
+    --pure-white: #F8F9FA;
+    --fresh-green: #4CAF50;       
+    --leaf-green: #81C784;        
+    --forest-dark: #2E7D32;       
+    --sky-blue: #B3E5FC;          
+    --ocean-blue: #0288D1;        
+    --text-dark: #263238;         
+    --text-medium: #455A64;
+    --text-light: #90A4AE;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -178,5 +191,406 @@ body {
     
     .info-card {
         padding: 20px;
+    }
+}
+
+.navbar {
+    background-color: var(--white);
+    padding: 1.2rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    border-bottom: 3px solid var(--leaf-green);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 1.5rem;
+}
+
+.nav-link {
+    color: var(--forest-dark);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--fresh-green);
+    border-bottom-color: var(--fresh-green);
+}
+
+.nav-link.active {
+    color: var(--fresh-green);
+    border-bottom-color: var(--ocean-blue);
+}
+
+
+.showcase {
+    background: 
+        linear-gradient(rgba(46, 125, 50, 0.2), rgba(46, 125, 50, 0.2)), 
+        url('img/Background.jpg') no-repeat center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.88);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.showcase h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--forest-dark);
+    line-height: 1.2;
+}
+
+.tagline {
+    font-size: 1.4rem;
+    color: var(--text-medium);
+    margin-bottom: 2.5rem;
+}
+
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 3rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 3rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: var(--ocean-blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: var(--fresh-green);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    border: 2px solid var(--ocean-blue);
+    color: var(--ocean-blue);
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--sky-blue);
+    color: var(--white);
+    border-color: var(--sky-blue);
+}
+
+
+.features {
+    padding: 5rem 2rem;
+    background-color: var(--white);
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--leaf-green);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    color: var(--fresh-green);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.footer {
+    background-color: var(--forest-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-link {
+    color: var(--sky-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--leaf-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-item {
+        margin: 0.7rem 0;
+    }
+    
+    .showcase h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-cards {
+        grid-template-columns: 1fr;
+    }
+}
+.navbar {
+    background-color: var(--white);
+    padding: 1.2rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    border-bottom: 3px solid var(--leaf-green);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 1.5rem;
+}
+
+.nav-link {
+    color: var(--forest-dark);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--fresh-green);
+    border-bottom-color: var(--fresh-green);
+}
+
+.nav-link.active {
+    color: var(--fresh-green);
+    border-bottom-color: var(--ocean-blue);
+}
+
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.88);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.showcase h1 {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--forest-dark);
+    line-height: 1.2;
+}
+
+.tagline {
+    font-size: 1.4rem;
+    color: var(--text-medium);
+    margin-bottom: 2.5rem;
+}
+
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 3rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 3rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: var(--ocean-blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+    background-color: var(--fresh-green);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    border: 2px solid var(--ocean-blue);
+    color: var(--ocean-blue);
+}
+
+.cta-button.secondary:hover {
+    background-color: var(--sky-blue);
+    color: var(--white);
+    border-color: var(--sky-blue);
+}
+
+
+.features {
+    padding: 5rem 2rem;
+    background-color: var(--white);
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 4px solid var(--leaf-green);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    color: var(--fresh-green);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+.footer {
+    background-color: var(--forest-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 1rem 1rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-link {
+    color: var(--sky-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: var(--leaf-green);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-item {
+        margin: 0.7rem 0;
+    }
+    
+    .showcase h1 {
+        font-size: 2.5rem;
+    }
+    
+    .tagline {
+        font-size: 1.2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .feature-cards {
+        grid-template-columns: 1fr;
     }
 }

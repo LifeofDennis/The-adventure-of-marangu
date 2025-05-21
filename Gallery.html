@@ -6,78 +6,116 @@
     <title>Gallery - Adventure of Marangu</title>
     <link rel="stylesheet" href="gallery.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96">
 </head>
 <body>
     <header class="navbar">
         <nav>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a></li>
-                <li class="nav-item"><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link active"><i class="fas fa-images"></i> Gallery</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
                 <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>   
             </ul>    
         </nav> 
     </header>
     
-    <div class="gallery-container">
-        <header class="gallery-header">
+    <main class="gallery-container">
+        <section class="gallery-header">
             <h1>Marangu Adventure Gallery</h1>
             <p>Explore stunning visuals from our expeditions and the breathtaking landscapes of Kilimanjaro</p>
-        </header>
+        </section>
 
         <div class="gallery-grid">
-            <!-- Gallery  1 -->
-            <div class="gallery-item">
-                <img src="img/Our team.jpeg" alt="Our team">
-                <div class="overlay">
+            <!-- Gallery Item 1 -->
+            <figure class="gallery-item">
+                <img src="img/Our team.jpeg" alt="Our team at Uhuru Peak">
+                <figcaption class="overlay">
                     <h3>Uhuru Peak</h3>
                     <p>Our team at Africa's highest point</p>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
             
-            <!-- Gallery  2 -->
-            <div class="gallery-item">
-                <img src="img/Homestead.jpeg" alt="Marangu Village">
-                <div class="overlay">
+            <!-- Gallery Item 2 -->
+            <figure class="gallery-item">
+                <img src="img/Homestead.jpeg" alt="Traditional Chaga homestead">
+                <figcaption class="overlay">
                     <h3>Marangu Village</h3>
                     <p>Traditional Chaga homestead</p>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
             
-            
-            <div class="gallery-item">
+            <!-- Gallery Item 3 -->
+            <figure class="gallery-item">
                 <img src="img/Marangu waterfalls.jpg" alt="Marangu Waterfall">
-                <div class="overlay">
+                <figcaption class="overlay">
                     <h3>Marangu Waterfalls</h3>
                     <p>Refreshing mountain waters</p>
-                </div>
-            </div>
+                </figcaption>
+            </figure>
             
+            <!-- Gallery Item 4 -->
+            <figure class="gallery-item">
+                <img src="img/Mountain Kilimanjaro.jpeg" alt="Mount Kilimanjaro">
+                <figcaption class="overlay">
+                    <h3>Mount Kilimanjaro</h3>
+                    <p>The majestic Kilimanjaro</p>
+                </figcaption>
+            </figure>
             
-            <div class="gallery-item">
-                <img src="img/Mountain Kilimanjaro.jpeg" alt="Mountain Kilimanjaro">
-                <div class="overlay">
-                    <h3>Mountain Kilimanjaro</h3>
-                    <p>The mountain Kilimanjaro</p>
-                </div>
-            </div>
-            
-            <!-- Naweza endelea kuadd picture apa -->
+            <!-- Add more gallery items here as needed -->
         </div>
+    </main>
 
-        
-        <div class="navigation-buttons">
-            <a href="index.html" class="nav-button">
-                <i class="fas fa-home"></i> Home
-            </a>
-            <a href="about.html" class="nav-button">
-                <i class="fas fa-info-circle"></i> About
-            </a>
-            <a href="contact.html" class="nav-button">
-                <i class="fas fa-envelope"></i> Contact
-            </a>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Marangu Adventures</h3>
+                <p>Experience the majesty of Kilimanjaro with our expert guides and unforgettable tours.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Our Tours</h3>
+                <ul class="footer-links">
+                    <li><a href="#">Marangu Route</a></li>
+                    <li><a href="#">Machame Route</a></li>
+                    <li><a href="#">Safari Packages</a></li>
+                    <li><a href="#">Cultural Tours</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Marangu, Kilimanjaro, Tanzania</li>
+                    <li><i class="fas fa-phone"></i> +255 719 968 089</li>
+                    <li><i class="fas fa-envelope"></i> info@maranguadventure.com</li>
+                </ul>
+            </div>
         </div>
-    </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Marangu Adventures. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="privacy.html">Privacy Policy</a> | 
+                <a href="terms.html">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

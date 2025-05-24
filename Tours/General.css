@@ -10,6 +10,7 @@
     --text-dark: #263238;         
     --text-medium: #455A64;
     --text-light: #90A4AE;
+    --shadow-sm: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* Base Styles */
@@ -80,50 +81,11 @@ a:hover {
     border-bottom-color: var(--ocean-blue);
 }
 
-
-/* Breadcrumb */
-.breadcrumb {
-    padding: 1rem 0;
-    font-size: 0.9rem;
-}
-
-.breadcrumb a {
-    color: var(--ocean-blue);
-}
-
-.breadcrumb a:hover {
-    text-decoration: underline;
-}
-
-.breadcrumb span {
-    color: var(--text-medium);
-}
-
-/* tour-details.css - Tour Specific Styles */
-.tour-detail-container {
+/* Main Content */
+main {
     max-width: 1200px;
-    margin: 2rem auto;
+    margin: 0 auto;
     padding: 0 2rem;
-}
-
-.tour-title {
-    color: var(--forest-dark);
-    text-align: center;
-    margin: 2rem 0;
-    font-size: 2.5rem;
-    position: relative;
-    padding-bottom: 1rem;
-}
-
-.tour-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: var(--fresh-green);
 }
 
 /* Hero Banner Styles */
@@ -179,8 +141,39 @@ a:hover {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
+/* Route Highlights */
+.route-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
 
+.highlight-item {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s;
+}
 
+.highlight-item:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-item i {
+    font-size: 2rem;
+    color: var(--ocean-blue);
+    margin-bottom: 1rem;
+}
+
+.highlight-item h3 {
+    margin: 0.5rem 0;
+    color: var(--forest-dark);
+}
+
+/* Quick Facts */
 .quick-facts {
     background-color: var(--sky-blue);
     padding: 1.5rem;
@@ -208,7 +201,8 @@ a:hover {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-.route-description {
+/* Route Description */
+.route-description, .route-overview {
     margin: 3rem 0;
     padding: 1.5rem;
     background-color: var(--white);
@@ -216,16 +210,17 @@ a:hover {
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.route-description h2 {
+.route-description h2, .route-overview h2 {
     color: var(--forest-dark);
     margin-top: 0;
 }
 
-.detailed-itinerary {
+/* Itinerary Styles */
+.itinerary, .detailed-itinerary {
     margin: 3rem 0;
 }
 
-.itinerary-day {
+.day-item, .itinerary-day {
     margin-bottom: 1.5rem;
     padding: 1.5rem;
     background-color: var(--white);
@@ -234,11 +229,21 @@ a:hover {
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-.itinerary-day h3 {
+.day-item h4, .itinerary-day h3 {
     color: var(--forest-dark);
     margin-top: 0;
 }
 
+.day-item ul {
+    margin: 0.5rem 0 0 0;
+    padding-left: 1.5rem;
+}
+
+.day-item li {
+    margin-bottom: 0.5rem;
+}
+
+/* Pros and Cons */
 .pros-cons {
     display: flex;
     gap: 2rem;
@@ -269,6 +274,26 @@ a:hover {
     color: #C62828;
 }
 
+/* Tips Section */
+.tips {
+    margin: 3rem 0;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    border-left: 4px solid var(--ocean-blue);
+}
+
+.tips h3 {
+    color: var(--ocean-blue);
+    margin-top: 0;
+}
+
+.tips ul {
+    padding-left: 1.5rem;
+}
+
+/* Booking Section */
 .booking-section {
     text-align: center;
     margin: 3rem 0;
@@ -405,24 +430,18 @@ a:hover {
         gap: 1rem;
     }
     
+    .nav-item {
+        margin: 0;
+    }
+    
     .pros-cons {
         flex-direction: column;
     }
     
-    .facts-grid {
+    .facts-grid, .route-highlights {
         grid-template-columns: 1fr 1fr;
     }
     
-    .tour-detail-container {
-        padding: 0 1.5rem;
-    }
-    
-    .tour-title {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
     .hero-banner {
         height: 50vh;
         min-height: 300px;
@@ -438,6 +457,10 @@ a:hover {
 }
 
 @media (max-width: 480px) {
+    .facts-grid, .route-highlights {
+        grid-template-columns: 1fr;
+    }
+    
     .hero-banner {
         height: 40vh;
         min-height: 250px;
@@ -450,4 +473,179 @@ a:hover {
     .banner-content p {
         font-size: 1rem;
     }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ======================
+   CULTURAL TOURS STYLES
+   ====================== */
+.cultural-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.highlight-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s;
+}
+
+.highlight-card:hover {
+    transform: translateY(-5px);
+}
+
+.highlight-icon {
+    font-size: 2.5rem;
+    color: var(--ocean-blue);
+    margin-bottom: 1rem;
+}
+
+.highlight-card h3 {
+    color: var(--forest-dark);
+}
+
+.itinerary-section {
+    margin: 3rem 0;
+}
+
+.itinerary-day {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    border-left: 4px solid var(--leaf-green);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.itinerary-day h3 {
+    color: var(--forest-dark);
+    margin-top: 0;
+}
+
+.benefits-section {
+    margin: 3rem 0;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-item {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.benefit-item i {
+    font-size: 2rem;
+    color: var(--fresh-green);
+    margin-bottom: 1rem;
+}
+
+/* ======================
+   SAFARI PACKAGES STYLES
+   ====================== */
+.safari-packages {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.package-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+}
+
+.package-header {
+    background-color: var(--forest-dark);
+    color: var(--white);
+    padding: 1.5rem;
+}
+
+.package-header h3 {
+    margin: 0;
+}
+
+.duration {
+    display: inline-block;
+    background-color: var(--fresh-green);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.package-content {
+    padding: 1.5rem;
+}
+
+.package-features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.package-features li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.package-features i {
+    color: var(--ocean-blue);
+}
+
+.package-highlight {
+    font-style: italic;
+    color: var(--text-medium);
+}
+
+.safari-tips {
+    margin: 3rem 0;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.tip-item {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+}
+
+.tip-item i {
+    font-size: 2rem;
+    color: var(--ocean-blue);
+    margin-bottom: 1rem;
+}
+
+.tip-item h3 {
+    color: var(--forest-dark);
+    margin: 0.5rem 0;
 }

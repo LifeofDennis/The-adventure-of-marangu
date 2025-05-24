@@ -1,0 +1,453 @@
+/* styles.css - Base Styles */
+:root {
+    --white: #FFFFFF;
+    --pure-white: #F8F9FA;
+    --fresh-green: #4CAF50;       
+    --leaf-green: #81C784;        
+    --forest-dark: #2E7D32;       
+    --sky-blue: #B3E5FC;          
+    --ocean-blue: #0288D1;        
+    --text-dark: #263238;         
+    --text-medium: #455A64;
+    --text-light: #90A4AE;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-dark);
+    background-color: var(--pure-white);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--ocean-blue);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--forest-dark);
+}
+
+/* ======================
+   NAVIGATION
+   ====================== */
+.navbar {
+    background-color: var(--white);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+    border-bottom: 3px solid var(--leaf-green);
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 1.5rem;
+}
+
+.nav-link {
+    color: var(--forest-dark);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.nav-link:hover {
+    color: var(--fresh-green);
+    border-bottom-color: var(--fresh-green);
+}
+
+.nav-link.active {
+    color: var(--fresh-green);
+    border-bottom-color: var(--ocean-blue);
+}
+
+
+/* Breadcrumb */
+.breadcrumb {
+    padding: 1rem 0;
+    font-size: 0.9rem;
+}
+
+.breadcrumb a {
+    color: var(--ocean-blue);
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: var(--text-medium);
+}
+
+/* tour-details.css - Tour Specific Styles */
+.tour-detail-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.tour-title {
+    color: var(--forest-dark);
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.tour-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--fresh-green);
+}
+
+/* Hero Banner Styles */
+.hero-banner {
+    position: relative;
+    margin: 0;
+    height: 60vh;
+    max-height: 600px;
+    min-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-content {
+    text-align: center;
+    color: var(--white);
+    padding: 2rem;
+    max-width: 800px;
+    z-index: 3;
+}
+
+.banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content p {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.quick-facts {
+    background-color: var(--sky-blue);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 3rem 0;
+    border-left: 4px solid var(--ocean-blue);
+}
+
+.quick-facts h2 {
+    color: var(--ocean-blue);
+    margin-top: 0;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.fact-item {
+    background-color: var(--white);
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.route-description {
+    margin: 3rem 0;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.route-description h2 {
+    color: var(--forest-dark);
+    margin-top: 0;
+}
+
+.detailed-itinerary {
+    margin: 3rem 0;
+}
+
+.itinerary-day {
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    border-left: 4px solid var(--fresh-green);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.itinerary-day h3 {
+    color: var(--forest-dark);
+    margin-top: 0;
+}
+
+.pros-cons {
+    display: flex;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.pros, .cons {
+    flex: 1;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.pros {
+    background-color: rgba(129, 199, 132, 0.1);
+    border-left: 4px solid var(--leaf-green);
+}
+
+.pros h3 {
+    color: var(--forest-dark);
+}
+
+.cons {
+    background-color: rgba(238, 110, 115, 0.1);
+    border-left: 4px solid #EE6E73;
+}
+
+.cons h3 {
+    color: #C62828;
+}
+
+.booking-section {
+    text-align: center;
+    margin: 3rem 0;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--sky-blue) 0%, var(--pure-white) 100%);
+    border-radius: 8px;
+    border: 1px solid rgba(2, 136, 209, 0.2);
+}
+
+.booking-section h2 {
+    color: var(--ocean-blue);
+    margin-top: 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: var(--fresh-green);
+    color: var(--white);
+    font-weight: 600;
+    border-radius: 50px;
+    margin-top: 1rem;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    background-color: var(--forest-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.compare-link {
+    margin-top: 1rem;
+    color: var(--text-medium);
+}
+
+.compare-link a {
+    color: var(--ocean-blue);
+    font-weight: 500;
+}
+
+.compare-link a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+.main-footer {
+    background-color: var(--forest-dark);
+    color: var(--white);
+    padding: 3rem 0 0;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-column h3 {
+    color: var(--leaf-green);
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--sky-blue);
+}
+
+.footer-contact {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    color: var(--white);
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: var(--sky-blue);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    background-color: rgba(0,0,0,0.1);
+    font-size: 0.9rem;
+}
+
+.footer-bottom a {
+    color: var(--sky-blue);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .pros-cons {
+        flex-direction: column;
+    }
+    
+    .facts-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .tour-detail-container {
+        padding: 0 1.5rem;
+    }
+    
+    .tour-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 50vh;
+        min-height: 300px;
+    }
+    
+    .banner-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .banner-content p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-banner {
+        height: 40vh;
+        min-height: 250px;
+    }
+    
+    .banner-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .banner-content p {
+        font-size: 1rem;
+    }
+}

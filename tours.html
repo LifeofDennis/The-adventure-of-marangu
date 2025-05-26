@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours - Kilimanjaro Treks & Safaris | Marangu Adventures</title>
+    <meta name="description" content="Explore our range of Kilimanjaro climbing routes, Tanzania safari packages, and cultural tours. Choose your perfect adventure with expert guides.">
+    <link rel="stylesheet" href="tours.css">
+    <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
+    <link rel="stylesheet" href="Tours/General.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="Index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                <li class="nav-item"><a href="Gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+                <li class="nav-item"><a href="About.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+                <li class="nav-item"><a href="Contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>   
+                <li class="nav-item"><a href="tours.html" class="nav-link"><i class="fas fa-route"></i> Tours</a></li>
+            </ul>    
+        </nav> 
+    </header>
+
+    <main>
+        <section class="hero-banner">
+            <div class="banner-overlay">
+                <div class="banner-content">
+                    <h1>Our Adventure Tours</h1>
+                    <p>Discover Kilimanjaro climbs, wildlife safaris, and cultural experiences</p>
+                </div>
+            </div>
+            <img src="img/banner2.png" alt="Kilimanjaro and wildlife adventure tours" class="responsive-img">
+        </section>
+
+        <section class="tours-intro">
+            <h2>Choose Your Adventure</h2>
+            <p>Marangu Adventures offers three types of unforgettable experiences in Tanzania: Kilimanjaro climbs, wildlife safaris, and cultural tours. Each is designed to provide authentic, memorable experiences with expert local guides.</p>
+        </section>
+
+        <!-- Kilimanjaro Routes Section -->
+        <section class="tour-category">
+            <h2><i class="fas fa-mountain"></i> Kilimanjaro Climbing Routes</h2>
+            <p>Conquer Africa's highest peak with our expert-guided climbs. We offer two main routes with different difficulty levels and experiences.</p>
+
+            <div class="route-tabs">
+                <button class="tab-button active" onclick="openRouteTab('marangu')">Marangu Route</button>
+                <button class="tab-button" onclick="openRouteTab('machame')">Machame Route</button>
+            </div>
+
+            <!-- Marangu Route Tab -->
+            <div id="marangu" class="route-tab-content" style="display:block;">
+                <h3>Marangu Route ("Coca-Cola Route")</h3>
+                <p>The most popular hut-to-hut climbing route on Kilimanjaro, known for its comfortable accommodations and scenic diversity.</p>
+                
+                <div class="route-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Starting Point</h4>
+                        <p>Marangu Gate (1,830m)</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Duration</h4>
+                        <p>5-6 days</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>Difficulty</h4>
+                        <p>Moderate</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-home"></i>
+                        <h4>Accommodation</h4>
+                        <p>Mountain huts</p>
+                    </div>
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Advantages</h4>
+                        <ul>
+                            <li>Only route with hut accommodation</li>
+                            <li>Well-established infrastructure</li>
+                            <li>Diverse scenic landscapes</li>
+                            <li>Shorter duration option</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Challenges</h4>
+                        <ul>
+                            <li>Can be crowded in peak seasons</li>
+                            <li>Shorter acclimatization period</li>
+                            <li>Same ascent/descent route</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="./Tours/marangu route.html" class="cta-button">Book Marangu Route</a>
+            </div>
+
+            <!-- Machame Route Tab -->
+            <div id="machame" class="route-tab-content">
+                <h3>Machame Route ("Whiskey Route")</h3>
+                <p>Renowned as the most scenic path up Kilimanjaro, with excellent acclimatization opportunities and varied landscapes.</p>
+                
+                <div class="route-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Starting Point</h4>
+                        <p>Machame Gate (1,640m)</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Duration</h4>
+                        <p>6-7 days</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h4>Difficulty</h4>
+                        <p>Moderate to Challenging</p>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-campground"></i>
+                        <h4>Accommodation</h4>
+                        <p>Tented camps</p>
+                    </div>
+                </div>
+
+                <div class="pros-cons">
+                    <div class="pros">
+                        <h4>Advantages</h4>
+                        <ul>
+                            <li>Excellent acclimatization profile</li>
+                            <li>Most scenic route on Kilimanjaro</li>
+                            <li>Higher success rates than Marangu</li>
+                            <li>Less crowded than Marangu Route</li>
+                        </ul>
+                    </div>
+                    <div class="cons">
+                        <h4>Challenges</h4>
+                        <ul>
+                            <li>Steeper climbs than Marangu</li>
+                            <li>Tented accommodation only</li>
+                            <li>Longer summit day</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="./Tours/machame route.html" class="cta-button">Book Machame Route</a>
+            </div>
+        </section>
+
+        <!-- Safari Packages Section -->
+        <section class="tour-category">
+            <h2><i class="fas fa-binoculars"></i> Safari Packages</h2>
+            <p>Experience the best of Tanzania's wildlife and landscapes with our carefully designed safari packages.</p>
+
+            <div class="safari-packages">
+                <article class="package-card">
+                    <div class="package-header">
+                        <h3>Classic Wildlife Safari</h3>
+                        <span class="duration">3-7 days</span>
+                    </div>
+                    <div class="package-content">
+                        <p><strong>Locations:</strong> Serengeti, Ngorongoro Crater, Tarangire, Lake Manyara</p>
+                        <ul class="package-features">
+                            <li><i class="fas fa-car"></i> 4x4 safari vehicles</li>
+                            <li><i class="fas fa-bed"></i> Tented camps or lodges</li>
+                            <li><i class="fas fa-utensils"></i> Full board meals</li>
+                            <li><i class="fas fa-camera"></i> Daily game drives</li>
+                        </ul>
+                        <p class="package-highlight"><strong>Highlights:</strong> See the Big Five and spectacular landscapes</p>
+                    </div>
+                </article>
+
+                <article class="package-card">
+                    <div class="package-header">
+                        <h3>Luxury Safari Experience</h3>
+                        <span class="duration">5-10 days</span>
+                    </div>
+                    <div class="package-content">
+                        <p><strong>Locations:</strong> Private conservancies and premium lodges</p>
+                        <ul class="package-features">
+                            <li><i class="fas fa-plane"></i> Private transfers</li>
+                            <li><i class="fas fa-hotel"></i> Luxury lodges</li>
+                            <li><i class="fas fa-wine-glass-alt"></i> Gourmet dining</li>
+                            <li><i class="fas fa-hot-air-balloon"></i> Balloon safaris</li>
+                        </ul>
+                        <p class="package-highlight"><strong>Highlights:</strong> Exclusive experiences and ultimate comfort</p>
+                    </div>
+                </article>
+
+                <article class="package-card">
+                    <div class="package-header">
+                        <h3>Safari & Beach Combo</h3>
+                        <span class="duration">10-14 days</span>
+                    </div>
+                    <div class="package-content">
+                        <p><strong>Locations:</strong> Northern Circuit + Zanzibar</p>
+                        <ul class="package-features">
+                            <li><i class="fas fa-safari"></i> Wildlife game drives</li>
+                            <li><i class="fas fa-umbrella-beach"></i> Beachfront resorts</li>
+                            <li><i class="fas fa-fish"></i> Snorkeling/diving</li>
+                            <li><i class="fas fa-spa"></i> Spa treatments</li>
+                        </ul>
+                        <p class="package-highlight"><strong>Highlights:</strong> Adventure and relaxation combined</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="safari-tips">
+                <h3>Safari Planning Tips</h3>
+                <div class="tips-grid">
+                    <div class="tip-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Best Time</h4>
+                        <p>June-Oct for wildlife, Jan-Feb for calving season</p>
+                    </div>
+                    <div class="tip-item">
+                        <i class="fas fa-suitcase"></i>
+                        <h4>What to Pack</h4>
+                        <p>Neutral colors, binoculars, camera, sunscreen</p>
+                    </div>
+                </div>
+            </div>
+
+            <a href="./Tours/safari packages.html" class="cta-button">Book Your Safari</a>
+        </section>
+
+        <!-- Cultural Tours Section -->
+        <section class="tour-category">
+            <h2><i class="fas fa-people-arrows"></i> Cultural Tours</h2>
+            <p>Immerse yourself in the rich traditions of Tanzania's local communities with our authentic cultural experiences.</p>
+
+            <div class="cultural-highlights">
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Village Visits</h3>
+                    <p>Meet Maasai and Chagga communities, participate in daily life and traditional ceremonies.</p>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Workshops</h3>
+                    <p>Learn traditional crafts, cooking, and cultural practices from local artisans.</p>
+                </div>
+                
+                <div class="highlight-card">
+                    <div class="highlight-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Performances</h3>
+                    <p>Experience vibrant traditional music, dance, and theatrical performances.</p>
+                </div>
+            </div>
+
+            <div class="sample-itinerary">
+                <h3>Sample 4-Day Cultural Tour</h3>
+                <ul>
+                    <li><strong>Day 1:</strong> Arrival and orientation in Moshi</li>
+                    <li><strong>Day 2:</strong> Maasai village experience and beadwork</li>
+                    <li><strong>Day 3:</strong> Chagga homestead and coffee tour</li>
+                    <li><strong>Day 4:</strong> Cultural heritage sites and museums</li>
+                </ul>
+            </div>
+
+            <div class="benefits-section">
+                <h3>Why Choose Our Cultural Tours?</h3>
+                <ul>
+                    <li><i class="fas fa-heart"></i> Authentic community interactions</li>
+                    <li><i class="fas fa-hand-holding-heart"></i> Direct support to local families</li>
+                    <li><i class="fas fa-leaf"></i> Sustainable and ethical tourism</li>
+                </ul>
+            </div>
+
+            <a href="./Tours/cultural tours.html" class="cta-button">Book Cultural Tour</a>
+        </section>
+
+        <!-- Contact/Booking Section -->
+        <section id="contact" class="booking-section">
+            <h2>Ready for Your Adventure?</h2>
+            <p>Contact our team to book your tour or get more information about our packages.</p>
+            <a href="Contact.html" class="cta-button">Contact Us</a>
+            <p>Or call us directly: +255 621 207 767</p>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Marangu Adventures</h3>
+                <p>Experience the majesty of Kilimanjaro and Tanzania with our expert guides.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="tours.html">Tours</a></li>
+                    <li><a href="Gallery.html">Gallery</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Us</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> Marangu, Kilimanjaro, Tanzania</li>
+                    <li><i class="fas fa-phone"></i> +255 719 968 089</li>
+                    <li><i class="fas fa-envelope"></i> info@maranguadventure.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Marangu Adventures. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tab functionality for Kilimanjaro routes
+        function openRouteTab(routeName) {
+            const tabContents = document.getElementsByClassName("route-tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].style.display = "none";
+            }
+            
+            const tabButtons = document.getElementsByClassName("tab-button");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].className = tabButtons[i].className.replace(" active", "");
+            }
+            
+            document.getElementById(routeName).style.display = "block";
+            event.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>

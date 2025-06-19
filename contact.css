@@ -705,23 +705,30 @@ body {
     }
 }
 
-/* WhatsApp Button Styles */
-.Whatsapp-container {
+/* ======================
+   WHATSAPP BUTTON
+   ====================== */
+:root {
+    --whatsapp-green: #25D366;
+    --whatsapp-dark: #128C7E;
+}
+
+.whatsapp-container {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 2rem;
+    right: 2rem;
     z-index: 1000;
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.Whatsapp-button {
+.whatsapp-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
     padding: 14px 28px;
-    background-color: #25D366; /* WhatsApp brand green */
-    color: #FFFFFF;
+    background-color: var(--whatsapp-green);
+    color: var(--white);
     text-decoration: none;
     border-radius: 50px;
     font-weight: 600;
@@ -731,20 +738,18 @@ body {
     border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
-.Whatsapp-button:hover {
-    background-color: #128C7E; /* Darker green on hover */
+.whatsapp-button:hover {
+    background-color: var(--whatsapp-dark);
     transform: translateY(-3px);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
 }
 
-.Whatsapp-button:active {
+.whatsapp-button:active {
     transform: translateY(1px);
 }
 
-.Whatsapp-button img {
-    width: 24px;
-    height: 24px;
-    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
+.whatsapp-button i {
+    font-size: 1.5rem;
 }
 
 /* Optional Pulse Animation */
@@ -754,24 +759,23 @@ body {
     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
-.Whatsapp-button.pulse {
+.whatsapp-button.pulse {
     animation: whatsapp-pulse 2s infinite;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .Whatsapp-container {
-        bottom: 20px;
-        right: 20px;
+    .whatsapp-container {
+        bottom: 1rem;
+        right: 1rem;
     }
     
-    .Whatsapp-button {
+    .whatsapp-button {
         padding: 12px 20px;
         font-size: 0.9rem;
     }
     
-    .Whatsapp-button img {
-        width: 20px;
-        height: 20px;
+    .whatsapp-button i {
+        font-size: 1.2rem;
     }
 }

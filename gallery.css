@@ -1,6 +1,6 @@
-/* ======================
+/* 
    VARIABLES
-   ====================== */
+*/
 :root {
     --white: #FFFFFF;
     --pure-white: #F8F9FA;
@@ -17,9 +17,9 @@
     --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* ======================
+/* 
    BASE STYLES
-   ====================== */
+    */
 * {
     margin: 0;
     padding: 0;
@@ -33,9 +33,9 @@ body {
     background-color: var(--pure-white);
 }
 
-/* ======================
+/* 
    NAVIGATION
-   ====================== */
+    */
 .navbar {
     background-color: var(--white);
     padding: 1rem 2rem;
@@ -81,9 +81,9 @@ body {
     border-bottom-color: var(--ocean-blue);
 }
 
-/* ======================
+/* 
    GALLERY STYLES
-   ====================== */
+  */
 .gallery-container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -184,9 +184,9 @@ body {
     color: rgba(255, 255, 255, 0.9);
 }
 
-/* ======================
+/* 
    FOOTER STYLES
-   ====================== */
+   */
 .footer {
     background-color: var(--forest-dark);
     color: var(--pure-white);
@@ -322,9 +322,9 @@ body {
     text-decoration: underline;
 }
 
-/* ======================
+/* 
    RESPONSIVE DESIGN
-   ====================== */
+   */
 @media (max-width: 768px) {
     .navbar {
         padding: 1rem;
@@ -371,9 +371,9 @@ body {
     }
 }
 
-/* ======================
+/* 
    WHATSAPP BUTTON
-   ====================== */
+    */
 :root {
     --whatsapp-green: #25D366;
     --whatsapp-dark: #128C7E;

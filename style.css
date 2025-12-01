@@ -63,9 +63,7 @@ body {
 
 
 .showcase {
-    background: 
-        linear-gradient(rgba(46, 125, 50, 0.2), rgba(46, 125, 50, 0.2)), 
-        url('img/Background.jpg') no-repeat center/cover;
+    background:url("img/giraffe\ kilimanjaro\ mountain.jpg") no-repeat center/cover;
     height: 90vh;
     display: flex;
     align-items: center;

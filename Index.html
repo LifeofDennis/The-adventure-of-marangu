@@ -11,17 +11,19 @@
     <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
 </head>
 <body>
-    <header class="navbar">
-        <nav>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
-                <li class="nav-item"><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>  
-                 <li class="nav-item"><a href="tours.html" class="nav-link"><i class="fas fa-route"></i> Tours</a></li> 
-            </ul>    
-        </nav> 
-    </header>
+  <header class="navbar">
+    <nav>
+        <ul class="nav-menu" id="navMenu">
+            <li class="nav-item"><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+            <li class="nav-item"><a href="gallery.html" class="nav-link"><i class="fas fa-images"></i> Gallery</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>  
+            <li class="nav-item"><a href="tours.html" class="nav-link"><i class="fas fa-route"></i> Tours</a></li> 
+        </ul>    
+    </nav>
+    
+    
+</header>
     
     <main class="showcase">
         <div class="container">
@@ -152,5 +154,10 @@
             <span>Chat with Us</span>
         </a>
     </div>
+    <script>
+    document.getElementById('menuToggle').onclick = function() {
+        document.getElementById('navMenu').classList.toggle('open');
+    }
+</script>
 </body>
 </html>

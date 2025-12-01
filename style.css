@@ -532,6 +532,7 @@ body {
     font-size: 1.5rem;
 }
 
+
 /* Optional Pulse Animation */
 @keyframes whatsapp-pulse {
     0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }

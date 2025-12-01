@@ -23,9 +23,7 @@ body {
     background-color: var(--pure-white);
 }
 
-/* ======================
-   NAVIGATION
-   ====================== */
+
 .navbar {
     background-color: var(--white);
     padding: 1.2rem 2rem;
@@ -65,14 +63,8 @@ body {
     border-bottom-color: var(--fresh-green);
 }
 
-.nav-link.active {
-    color: var(--fresh-green);
-    border-bottom-color: var(--ocean-blue);
-}
 
-/* ======================
-   MAIN CONTENT
-   ====================== */
+
 article {
     max-width: 800px;
     margin: 2rem auto;
@@ -100,9 +92,7 @@ article h1 {
     text-align: center;
 }
 
-/* ======================
-   DOWNLOAD BUTTON
-   ====================== */
+
 .download-container {
     text-align: center;
     margin: 2rem 0;
@@ -136,9 +126,7 @@ article h1 {
 }
 
 
-/* ======================
-   FOOTER IMPROVEMENTS
-   ====================== */
+
 .footer {
     background-color: var(--forest-dark);
     color: var(--pure-white);
@@ -269,9 +257,6 @@ article h1 {
     text-decoration: underline;
 }
 
-/* ======================
-   RESPONSIVE DESIGN
-   ====================== */
 @media (max-width: 768px) {
     .nav-menu {
         flex-direction: column;
@@ -305,9 +290,7 @@ article h1 {
     }
 }
 
-/* ======================
-   WHATSAPP BUTTON
-   ====================== */
+
 :root {
     --whatsapp-green: #25D366;
     --whatsapp-dark: #128C7E;

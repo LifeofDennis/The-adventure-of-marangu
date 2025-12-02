@@ -56,10 +56,6 @@ body {
     border-bottom-color: var(--fresh-green);
 }
 
-.nav-link.active {
-    color: var(--fresh-green);
-    border-bottom-color: var(--ocean-blue);
-}
 
 
 .showcase {

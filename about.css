@@ -58,10 +58,6 @@ body {
     gap: 0.5rem;
 }
 
-.nav-link:hover {
-    color: var(--fresh-green);
-    border-bottom-color: var(--fresh-green);
-}
 
 
 

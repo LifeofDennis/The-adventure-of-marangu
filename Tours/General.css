@@ -82,11 +82,7 @@ a:hover {
     border-bottom-color: var(--fresh-green);
 }
 
-.nav-link.active {
-    color: var(--fresh-green);
-    border-bottom-color: var(--ocean-blue);
-}
- 
+
 /* Main Content */
 main {
     max-width: 1200px;

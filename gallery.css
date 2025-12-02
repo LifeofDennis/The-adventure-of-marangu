@@ -84,6 +84,32 @@ body {
 /* 
    GALLERY STYLES
   */
+  .gallery-item {
+    position: relative;
+    width: 300px;       /* Set your gallery size */
+    overflow: hidden;   /* Hide overflow */
+    border-radius: 10px;
+}
+
+.inner-slider {
+    display: flex;
+    overflow-x: auto;             /* Horizontal scroll */
+    scroll-snap-type: x mandatory; /* Snap each image */
+    scrollbar-width: none;        /* Hide scrollbar (Firefox) */
+}
+
+.inner-slider::-webkit-scrollbar {
+    display: none;                /* Hide scrollbar (Chrome/Safari) */
+}
+
+.inner-slider img {
+    width: 100%;
+    height: auto;
+    scroll-snap-align: start;      /* Snap each image cleanly */
+    flex-shrink: 0;                /* Prevent shrinking */
+    object-fit: cover;
+}
+
 .gallery-container {
     max-width: 1200px;
     margin: 2rem auto;
@@ -445,3 +471,4 @@ body {
         font-size: 1.2rem;
     }
 }
+
